@@ -25,6 +25,7 @@ void App()
             if (str != "")
             {
                 AddTask(str);
+                App();
             }
             else
             {
@@ -34,6 +35,7 @@ void App()
 
         case "3":
             ClearList();
+            App();
             break;
 
         default:
@@ -47,13 +49,11 @@ void App()
 void AddTask(string str)
 {
     toDoList.Add(str);
-    App();
 }
 
 void ClearList()
 {
     toDoList.Clear();
-    App();
 }
 
 App();
