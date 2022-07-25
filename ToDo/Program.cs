@@ -7,7 +7,7 @@ void App()
        "2) Добавить новую задачу \n" +
        "3) Очистить список \n");
 
-    switch (Console.ReadLine())
+    switch (Console.ReadLine().Trim())
     {
         case "1":
             Console.Clear();
@@ -21,7 +21,7 @@ void App()
             break;
 
         case "2":
-            var str = Console.ReadLine();
+            var str = Console.ReadLine().Trim();
             if (str != "")
             {
                 AddTask(str);
